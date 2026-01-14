@@ -49,7 +49,7 @@ function App() {
       {downloadFile && (
         <div style={{ textAlign: 'center', marginTop: '2rem' }}>
           <a
-            href={`/api/download?file=${downloadFile}`}
+            href={`/api/download?file=${encodeURIComponent(downloadFile)}`}
             className="btn download-btn"
             style={{ maxWidth: '300px', margin: '0 auto' }}
             download
