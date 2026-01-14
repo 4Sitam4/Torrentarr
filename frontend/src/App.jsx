@@ -3,6 +3,7 @@ import FileBrowser from './components/FileBrowser';
 import TorrentForm from './components/TorrentForm';
 import './App.css';
 import { FolderOpen, Upload, Terminal } from 'lucide-react';
+import AppLogo from './assets/Logo_torrentarr.png';
 
 function App() {
   const [selectedSource, setSelectedSource] = useState('');
@@ -13,7 +14,10 @@ function App() {
   return (
     <div className="app-container">
       <header className="app-header">
-        <h1><Upload className="icon" /> Torrentarr</h1>
+        <h1>
+          <img src={AppLogo} alt="Torrentarr Logo" style={{ width: '50px', height: '50px', objectFit: 'contain' }} />
+          Torrentarr
+        </h1>
         <p>Simple WebUI for mktorrent</p>
       </header>
 
@@ -46,8 +50,8 @@ function App() {
         <div style={{ textAlign: 'center', marginTop: '2rem' }}>
           <a
             href={`http://localhost:3000/api/download?file=${downloadFile}`}
-            className="btn"
-            style={{ maxWidth: '300px', margin: '0 auto', background: '#40c057', textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}
+            className="btn download-btn"
+            style={{ maxWidth: '300px', margin: '0 auto' }}
             download
           >
             <Upload className="icon" style={{ transform: 'rotate(180deg)' }} /> Download .torrent

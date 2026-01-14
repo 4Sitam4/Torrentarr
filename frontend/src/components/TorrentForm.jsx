@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 const API_BASE = 'http://localhost:3000/api';
 
 const TorrentForm = ({ selectedSource, onSuccess, onProcess }) => {
-    const [announceUrl, setAnnounceUrl] = useState('https://www.sharewood.tv/announce/YOUR_PASSKEY');
+    const [announceUrl, setAnnounceUrl] = useState('https://');
     const [outputName, setOutputName] = useState('');
     const [pieceSize, setPieceSize] = useState(21);
     const [nfoFile, setNfoFile] = useState(null);

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Folder, File, ArrowUp, ChevronRight } from 'lucide-react';
+import { Folder, File, ArrowUp, ChevronRight, RotateCw } from 'lucide-react';
 
 const API_BASE = 'http://localhost:3000/api';
 
@@ -45,10 +45,13 @@ const FileBrowser = ({ onSelect, selected }) => {
         <div className="file-browser">
             <div className="path-nav">
                 {parentPath && (
-                    <button className="nav-btn" onClick={() => fetchPath(parentPath)}>
-                        <ArrowUp size={16} /> Up
+                    <button className="nav-btn" onClick={() => fetchPath(parentPath)} title="Go Up">
+                        <ArrowUp size={16} />
                     </button>
                 )}
+                <button className="nav-btn" onClick={() => fetchPath(currentPath || '')} title="Refresh">
+                    <RotateCw size={16} />
+                </button>
                 <div style={{ padding: '0.4rem', color: '#adb5bd', fontSize: '0.9rem', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                     Current: {currentPath || '/'}
                 </div>
@@ -70,8 +73,7 @@ const FileBrowser = ({ onSelect, selected }) => {
                         </div>
                         {item.isDirectory && (
                             <button
-                                className="nav-btn"
-                                style={{ marginLeft: '1rem', padding: '0.2rem 0.5rem', fontSize: '0.8rem' }}
+                                className="nav-btn select-dir-btn"
                                 onClick={(e) => handleSelectDir(item.path, e)}
                             >
                                 Select Dir
@@ -84,7 +86,7 @@ const FileBrowser = ({ onSelect, selected }) => {
 
             {currentPath && (
                 <div style={{ marginTop: '0.5rem' }}>
-                    <button className="btn" style={{ background: '#343a40' }} onClick={() => onSelect(currentPath)}>Select Current Directory</button>
+                    <button className="btn" onClick={() => onSelect(currentPath)}>Select Current Directory</button>
                 </div>
             )}
         </div>
