@@ -21,7 +21,15 @@ A lightweight, Dockerized WebUI for `mktorrent`. Generate `.torrent` files direc
 
 ## Installation & Usage
 
-### 1. Build the Image
+### 1. Get the Image
+
+**Option A: Pull from GitHub Container Registry**
+
+```bash
+docker pull ghcr.io/4sitam4/torrentarr:latest
+```
+
+**Option B: Build Locally**
 
 Run the following command in the root directory (where the `Dockerfile` is located):
 
@@ -52,7 +60,7 @@ If you prefer using `docker-compose`, add this to your `docker-compose.yml`:
 ```yaml
 services:
   torrentarr:
-    image: torrentarr:latest # Or build: . if running from source
+    image: ghcr.io/4sitam4/torrentarr:latest
     container_name: torrentarr
     ports:
       - "3000:3000"
