@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const API_BASE = 'http://localhost:3000/api';
+const API_BASE = '/api';
 
 const TorrentForm = ({ selectedSource, onSuccess, onProcess }) => {
     const [announceUrl, setAnnounceUrl] = useState('https://');

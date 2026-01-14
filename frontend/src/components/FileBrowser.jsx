@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Folder, File, ArrowUp, ChevronRight, RotateCw } from 'lucide-react';
 
-const API_BASE = 'http://localhost:3000/api';
+const API_BASE = '/api';
 
 const FileBrowser = ({ onSelect, selected }) => {
     const [currentPath, setCurrentPath] = useState('');

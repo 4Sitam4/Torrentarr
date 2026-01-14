@@ -70,6 +70,7 @@ app.get('/api/files', (req, res) => {
                     bytes: fileStats.size
                 };
             } catch (err) {
+                console.error(`Error stat-ing file ${absolutePath}:`, err.message);
                 return null;
             }
         }).filter(Boolean);
