@@ -1,4 +1,0 @@
-Server configured with:
-DATA_DIR: /home/sitam/Documents/GitHub/1. PERSO/Torrentarr/test_data
-OUTPUT_DIR: /home/sitam/Documents/GitHub/1. PERSO/Torrentarr/test_output
-Backend server running on http://0.0.0.0:3000
