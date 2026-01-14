@@ -84,6 +84,7 @@
   gap: 2rem;
 }
 
+/* Side-by-side layout removed for vertical stacking as requested */
 @media (min-width: 850px) {
   .app-main {
     grid-template-columns: 1.4fr 1fr;
@@ -229,9 +230,8 @@
 
 .file-name {
   font-weight: 500;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: normal;
+  word-break: break-all;
 }
 
 .file-size {
