@@ -4,6 +4,8 @@ A lightweight, Dockerized WebUI for `mktorrent`. Generate `.torrent` files direc
 
 ![Torrentarr Logo](frontend/src/assets/README_Logo.png)
 
+![Torrentarr Screenshot](frontend/src/assets/Torrentarr_screenshot.png)
+
 ## Features
 
 -   **Web Interface**: Clean, responsive, and dark-themed UI for creating torrents.
